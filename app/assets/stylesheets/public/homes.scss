@@ -1,3 +1,55 @@
-// Place all the styles related to the public::homes controller here.
+// Place all the styles related to the public/homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.sidebar ul {
+  margin-top: 80px;
+  margin-right:40px;
+}
+
+.sidebar ul li:first-child {
+  height: 40px;
+  line-height: 40px;
+  border-top:3px solid seagreen;
+}
+
+.sidebar ul li {
+  height: 40px;
+  border-bottom:1px solid seagreen;
+  text-align: center;
+  line-height: 40px;
+}
+
+.sidebar ul li:last-child {
+  border-bottom:3px solid seagreen;
+}
+
+.button:hover {
+  background-color:#FFF5EE;
+}
+
+.about-content h3 {
+  margin-left:250px;
+}
+
+.table-bordered {
+  margin-top:30px;
+}
+
+.table-bordered th {
+  width: 100px;
+  height: 60px;
+  text-align: center;
+}
+
+.recommendation {
+  font-size: 25px;
+  width: 30%;
+  background: #ffeaff;
+  box-shadow: 0px 0px 0px 5px #ffeaff;
+  border: dashed 1px #ff99cc;
+  padding: 0.2em 0.5em;
+  color: #454545;
+  text-align: center;
+}

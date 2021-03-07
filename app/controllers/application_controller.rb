@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
 				admin_admins_path
 			when Member
 				root_path
-			end
 		end
 	end 
 
