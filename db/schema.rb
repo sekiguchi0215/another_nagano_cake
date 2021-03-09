@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_05_102606) do
+ActiveRecord::Schema.define(version: 2021_03_09_191147) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "name", null: false
@@ -72,10 +72,10 @@ ActiveRecord::Schema.define(version: 2021_03_05_102606) do
     t.string "postal_code", null: false
     t.string "address", null: false
     t.integer "phone_number", null: false
-    t.integer "withdrawal_status", null: false
     t.boolean "is_deleted", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "withdrawal_status"
     t.index ["email"], name: "index_members_on_email", unique: true
     t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
   end

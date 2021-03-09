@@ -11,9 +11,9 @@ class Member < ApplicationRecord
   enum withdrawal_status: { 有効: 0, 無効: 1 }
 
   validates :first_name, presence: true
-  validates :last_naem, presence: true
+  validates :last_name, presence: true
   validates :first_name_kana, presence: true
-  validates :last_naem_kana, presence: true
+  validates :last_name_kana, presence: true
   validates :postal_code, presence: true
   validates :address, presence: true
   validates :phone_number, presence: true
