@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     patch "/members/withdrawal" => "members#destroy"
     get  "/members/withdrawal" => "members#withdrawal"
     resources :orders, only: [:new, :create, :index, :show]
-    resource  :members, only: [:show, :edit, :update]
+    resources :members, only: [:show, :edit, :update]
     resources :addresses, only: [:index, :edit, :destroy, :create, :update]
   end
 end

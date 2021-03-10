@@ -1,2 +1,84 @@
-<h1>Public::Members#edit</h1>
-<p>Find me in app/views/public/members/edit.html.erb</p>
+<h2>
+	<i class="fas fa-user-edit"></i>登録情報編集
+</h2>
+
+<%= form_for (@member), url: public_member_path do |f| %>
+	<div class="row user_edit">
+		<div class="col-xs-2">
+			<h6>名前</h6>	
+		</div>
+		<div class="col-xs-1">
+			<%= f.label :first_name, "（姓）" %>
+		</div>
+		<div class="col-xs-2">
+			<%= f.text_field :first_name %>
+		</div>
+		<div class="col-xs-1">
+			<%= f.label :last_name, "（名）" %>
+		</div>
+		<div class="col-xs-2">
+			<%= f.text_field :last_name %>
+		</div>
+	</div>
+	<div class="row user_edit">
+		<div class="col-xs-2">
+			<h6>フリガナ</h6>
+		</div>
+		<div class="col-xs-1">
+			<%= f.label :first_name_kana, "（セイ）" %>
+		</div>
+		<div class="col-xs-2">
+			<%= f.text_field :first_name_kana %>
+		</div>
+		<div class="col-xs-1">
+			<%= f.label :last_name_kana, "（メイ）" %>
+		</div>
+		<div class="col-xs-2">
+			<%= f.text_field :last_name_kana %>
+		</div>
+	</div>
+	<div class="row user_edit">
+		<div class="col-xs-3">
+			<%= f.label :email, "メールアドレス" %>
+		</div>
+		<div class="col-xs-3">
+			<%= f.email_field :email %>
+		</div>
+	</div>
+	<div class="row user_edit">
+		<div class="col-xs-3">
+			<%= f.label :phone_number, "電話番号" %>
+		</div>
+		<div class="col-xs-3">
+			<%= f.text_field :phone_number %>
+		</div>
+	</div>	
+	<div class="row user_edit">
+		<div class="col-xs-3">
+			<%= f.label :postal_code, "郵便番号" %>
+		</div>
+		<div class="col-xs-3">
+			<%= f.text_field :postal_code, autofocus: true, autocomplete: "postal_code" %>
+		</div>
+	</div>
+	<div class="row user_edit">
+		<div class="col-xs-3">
+			<%= f.label :address, "住所" %>
+		</div>
+		<div class="col-xs-3">
+			<%= f.text_field :address, autocomplete: "address", :size => "50" %>
+		</div>
+	</div>
+
+	<div class="row user_edit">
+		<div class="col-xs-3">
+			<%= f.submit "編集内容を保存", class: "btn btn-primary" %>
+		</div>
+		<div class="col-xs-3">
+			<%= button_to "退会する", public_members_withdrawal_path, method: :get, class: "btn btn-danger" %>
+			<!-- "button_to"はformを作りその中にinputタグでボタンを生成する。
+				 "link_to"はaタグを生成する。
+				 また、オプションを記述しない場合のHTTPリスエストは、"link_to"は"get"、"button_to"は"post"となる。 -->
+		</div>
+	</div>
+<% end %>

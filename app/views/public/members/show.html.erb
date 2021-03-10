@@ -5,8 +5,8 @@
 
 	<p class="under_mypage">
 		<strong>登録情報</strong>
-		<%= link_to "", edit_public_members_path(@member.id), class: "btn btn-primary mapage_edit" %>
-		<%= link_to "", edit_public_member_registration_path, class: "btn btn-primary" %>
+		<%= link_to "編集する", edit_public_member_path(@member.id), class: "btn btn-primary mapage_edit" %>
+		<%= link_to "パスワードを変更する", edit_member_registration_path, class: "btn btn-primary" %>
 	</p>
 </div>
 <div class="row">
