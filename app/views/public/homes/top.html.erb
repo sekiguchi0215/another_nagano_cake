@@ -27,7 +27,7 @@
 							<%= attachment_image_tag item, :image, size: "150x150", fallback: "no_image.jpg" %>
 						<% end %>
 						<p><%= item.item_name %></p>
-						<p>¥<%= (item.unit_price_without_tax * 1.1)floor %></p>
+						<p>¥<%= (item.unit_price_without_tax * 1.1).floor %></p>
 					</div>
 				<% end %>
 			</div>
