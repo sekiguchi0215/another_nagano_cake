@@ -3,6 +3,7 @@ class Public::MembersController < ApplicationController
   end
 
   def show
+  	@member = current_member
   end
 
   def withdrawal
