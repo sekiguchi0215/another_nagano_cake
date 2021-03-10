@@ -75,10 +75,7 @@
 			<%= f.submit "編集内容を保存", class: "btn btn-primary" %>
 		</div>
 		<div class="col-xs-3">
-			<%= button_to "退会する", public_members_withdrawal_path, method: :get, class: "btn btn-danger" %>
-			<!-- "button_to"はformを作りその中にinputタグでボタンを生成する。
-				 "link_to"はaタグを生成する。
-				 また、オプションを記述しない場合のHTTPリスエストは、"link_to"は"get"、"button_to"は"post"となる。 -->
+			<%= link_to "退会する", public_members_withdrawal_path, class: "btn btn-danger" %>
 		</div>
 	</div>
 <% end %>

@@ -25,7 +25,7 @@
               <% if member_signed_in? %>
                 <li id="youkoso">ようこそ、<%= current_member.last_name %>さん！</li>
                 <li>
-                  <%= link_to public_member_path do %>
+                  <%= link_to public_member_path(current_member) do %>
                     <i class="fas fa-user"></i>マイページ
                   <% end %>
                 </li>
@@ -129,22 +129,3 @@
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
